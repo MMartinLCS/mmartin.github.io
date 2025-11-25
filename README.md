@@ -1,4 +1,3 @@
-# mmartin.github.io
 <!doctype html>
 <html lang="en" class="h-100">
   <head>
@@ -11,7 +10,7 @@
     <title>Druni</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer/">
-    <script src="https://druni--int.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
+    <script src="https://druni--devpt.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
     
 
     <!-- Bootstrap core CSS -->
@@ -72,11 +71,11 @@
     </footer>
     <script type="text/javascript">
       function init(){
-          $Lightning.use("c:embeddedCaseFormWebApp",    // name of the Lightning app
+          $Lightning.use("c:embeddedCaseFormWebPTApp",    // name of the Lightning app
               function() {  
                 console.log('add component.');                
                   $Lightning.createComponent(
-                      "c:embeddedCaseFormWeb", // top-level component of your app
+                      "c:embeddedCaseFormWebPT", // top-level component of your app
                       { },                  // attributes to set on the component when created
                       "lexcontainer",   // the DOM location to insert the component
                       function(cmp) { 
@@ -84,7 +83,7 @@
                       }
                   );
               },
-      'https://druni.my.salesforce-sites.com/casoWeb'  // Experience Cloud site endpoint
+      'https://druni--devpt.sandbox.my.salesforce-sites.com/casoWebPT'  // Experience Cloud site endpoint
           );
           }
       </script>
