@@ -42,11 +42,11 @@
 <script type="text/javascript">
 	    (function() {
       console.log('init component');
-        $Lightning.use("c:embeddedCaseFormWebPTApp",    // nombre de la aplicación Lightning
+        $Lightning.use("c:embeddedCaseFormWebApp",    // nombre de la aplicación Lightning
             function() {
                 console.log('Agregar componente.');
                 $Lightning.createComponent(
-                    "c:embeddedCaseFormWebPT", // componente de nivel superior de tu aplicación
+                    "c:embeddedCaseFormWeb", // componente de nivel superior de tu aplicación
                     {},                     // atributos a establecer en el componente cuando se crea
                     "lexcontainer",         // la ubicación del DOM para insertar el componente
                     function(cmp) {
@@ -54,7 +54,7 @@
                     }
                 );
             },
-            'https://druni--devpt.sandbox.my.salesforce-sites.com/casoWebPT'  // endpoint de Experience Cloud
+            'https://druni--devpt.sandbox.my.salesforce-sites.com/casoWeb'  // endpoint de Experience Cloud
         );
     })();
       </script>

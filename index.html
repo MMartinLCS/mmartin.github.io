@@ -1,3 +1,4 @@
+<!-- ESTE ES EL QUE CARGA LA PAGE. MODIFICAR SOLO ESTE CON EL CODIGO DE LA PAGE QUE SE QUIERA CARGAR -->
 <!doctype html>
 <html lang="es">
     <head >
@@ -42,11 +43,11 @@
 <script type="text/javascript">
 	    (function() {
       console.log('init component');
-        $Lightning.use("c:embeddedCaseFormWebApp",    // nombre de la aplicación Lightning
+        $Lightning.use("c:embeddedCaseFormWebPTApp",    // nombre de la aplicación Lightning
             function() {
                 console.log('Agregar componente.');
                 $Lightning.createComponent(
-                    "c:embeddedCaseFormWeb", // componente de nivel superior de tu aplicación
+                    "c:embeddedCaseFormWebPT", // componente de nivel superior de tu aplicación
                     {},                     // atributos a establecer en el componente cuando se crea
                     "lexcontainer",         // la ubicación del DOM para insertar el componente
                     function(cmp) {
@@ -54,7 +55,7 @@
                     }
                 );
             },
-            'https://druni--devpt.sandbox.my.salesforce-sites.com/casoWeb'  // endpoint de Experience Cloud
+            'https://druni--devpt.sandbox.my.salesforce-sites.com/casoWebPT'  // endpoint de Experience Cloud
         );
     })();
       </script>
