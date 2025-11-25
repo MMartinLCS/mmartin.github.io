@@ -1,91 +1,20 @@
-<!doctype html>
-<html lang="en" class="h-100">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>Druni</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'es'; // For example, enter 'en' or 'en-US'
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer/">
-    <script src="https://druni--devpt.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
-    
-
-    <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="dist/css/app.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-      .header {
-        height: 100px;
-        border-bottom: 1px solid rgba(0,0,0,.3);
-        display: flex;
-        align-items: center;
-        padding: 0 20px;
-      }
-  
-      .header img {
-        width: auto;
-        height: 85%; /* Ajusta la altura de la imagen al alto del encabezado */
-      }
-  
-      .footer {
-        background-color: #000;
-        color: white;
-        padding: 10px 0;
-        height: 80px;
-      }
-    </style>
-  </head>
-  <body class="d-flex flex-column h-100 fixed-top" onload="init()">
-    <header class="header">
-      <img class="py-4" src="https://www.druni.es/media/wysiwyg/logoStore/logo.svg" alt="Logo">
-      <!-- Puedes agregar aquí cualquier otro contenido del encabezado si es necesario -->
-    </header>
-    <main class="flex-shrink-0">
-      <div class="container">
-        <div id="lexcontainer" style="padding-top: 10%;">
-        </div>
-      </div>
-    </main>
-
-    <footer class="footer mt-auto py-3">
-      <div class="container">
-        <span class="text-muted">Druni</span>
-      </div>
-    </footer>
-    <script type="text/javascript">
-      function init(){
-          $Lightning.use("c:embeddedCaseFormWebPTApp",    // name of the Lightning app
-              function() {  
-                console.log('add component.');                
-                  $Lightning.createComponent(
-                      "c:embeddedCaseFormWebPT", // top-level component of your app
-                      { },                  // attributes to set on the component when created
-                      "lexcontainer",   // the DOM location to insert the component
-                      function(cmp) { 
-                          console.log('initialized.');// callback when component is created and active on the page
-                      }
-                  );
-              },
-      'https://druni--devpt.sandbox.my.salesforce-sites.com/casoWebPT'  // Experience Cloud site endpoint
-          );
-          }
-      </script>
-  </body>
-</html>
+			embeddedservice_bootstrap.init(
+				'00D2o000000kDzf',
+				'Service_Agent_Portugal',
+				'https://druni.my.site.com/ESWServiceAgentPortugal1763115153679',
+				{
+					scrt2URL: 'https://druni.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://druni.my.site.com/ESWServiceAgentPortugal1763115153679/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
