@@ -1,91 +1,62 @@
 <!doctype html>
-<html lang="en" class="h-100">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>Druni</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer/">
-    <script src="https://druni--int.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
-    
-
-    <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="dist/css/app.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-      .header {
-        height: 100px;
-        border-bottom: 1px solid rgba(0,0,0,.3);
-        display: flex;
-        align-items: center;
-        padding: 0 20px;
-      }
-  
-      .header img {
-        width: auto;
-        height: 85%; /* Ajusta la altura de la imagen al alto del encabezado */
-      }
-  
-      .footer {
-        background-color: #000;
-        color: white;
-        padding: 10px 0;
-        height: 80px;
-      }
-    </style>
-  </head>
-  <body class="d-flex flex-column h-100 fixed-top" onload="init()">
-    <header class="header">
-      <img class="py-4" src="https://www.druni.es/media/wysiwyg/logoStore/logo.svg" alt="Logo">
-      <!-- Puedes agregar aquí cualquier otro contenido del encabezado si es necesario -->
-    </header>
-    <main class="flex-shrink-0">
-      <div class="container">
-        <div id="lexcontainer" style="padding-top: 10%;">
-        </div>
-      </div>
-    </main>
-
-    <footer class="footer mt-auto py-3">
-      <div class="container">
-        <span class="text-muted">Druni</span>
-      </div>
-    </footer>
-    <script type="text/javascript">
-      function init(){
-          $Lightning.use("c:embeddedCaseFormWebApp",    // name of the Lightning app
-              function() {  
-                console.log('add component.');                
-                  $Lightning.createComponent(
-                      "c:embeddedCaseFormWeb", // top-level component of your app
-                      { },                  // attributes to set on the component when created
-                      "lexcontainer",   // the DOM location to insert the component
-                      function(cmp) { 
-                          console.log('initialized.');// callback when component is created and active on the page
-                      }
-                  );
-              },
-      'https://druni.my.salesforce-sites.com/casoWeb'  // Experience Cloud site endpoint
-          );
-          }
+<html lang="es">
+    <head >
+                <meta charset="utf-8"/>
+<meta name="title" content="Formulario att cliente"/>
+<meta name="robots" content="INDEX,FOLLOW"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<title>Formulario att cliente</title>
+<script src="https://druni--int.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
+<div id="lexcontainer" style="padding-top: 10%;"></div>
+</div></div></div></main><footer class="page-footer"><div class="footer content"><div class="row no-gutters"><div class="footer-contact col-12 col-md-3"><div class="footer-logo"><img src="https://release.druni.es/media/wysiwyg/logoStore/logo.svg" width="116" height="30" /></div>
+<!--<p class="store-hours">Lunes - Viernes de 9:00 a 19:00h</p>
+<p class="store-phone"><a href="tel:+34 603 774 054">+34 603 774 054</a></p> -->
+<div x-data="{ open: false }" class="mb-50" id="all_stores_list">
+    <div class="title-font text-md text-gray-dark mb-2 hidden">
+        Lenguaje    </div>
+    <div class="relative w-fit">
+        <button @click.prevent="open = !open"
+                @click.outside="open = false"
+                @keydown.window.escape="open=false"
+                class="flex flex-row flex-nowrap items-center cursor-pointer border-none hover:bg-transparent active:bg-transparent focus:bg-transparent px-2"
+                aria-haspopup="true"
+                aria-expanded="true">
+            <span><img class="h-4 w-4 mr-2.5" width="16" height="16" alt="Flag España (Península y Baleares)" src="https://release.druni.es/static/version1729709362/frontend/Druni/default/es_ES/images/store/es_es.svg" loading="lazy"/></span>
+            <span>España (Península y Baleares)</span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-4 h-4 ml-2" width="24" height="24"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg>
+</span>
+        </button>
+        <nav x-cloak=""
+             x-show="open"
+             class="overflow-auto absolute left-0 top-full z-20 rounded-sm shadow-lg origin-top-left bg-container-lighter text-black mt-1.5 lg:mt-4 w-max">
+                                            <div class="divide-y divide-gray-light" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                    <a href="https://canarias.druni.es"
+                       class="flex flex-row items-center text-lg flex-no-wrap px-4 py-2 hover:bg-gray-light">
+                        <span><img class="h-4 w-4 mr-2.5" width="16" height="16" alt="Flag España (Islas Canarias)" src="https://release.druni.es/static/version1729709362/frontend/Druni/default/es_ES/images/store/es_Es.svg" loading="lazy"/></span>
+                        España (Islas Canarias)                    </a>
+                </div>
+                                    </nav>
+    </div>
+</div>
+<script type="text/javascript">
+	    (function() {
+      console.log('init component');
+        $Lightning.use("c:embeddedCaseFormWebApp",    // nombre de la aplicación Lightning
+            function() {
+                console.log('Agregar componente.');
+                $Lightning.createComponent(
+                    "c:embeddedCaseFormWeb", // componente de nivel superior de tu aplicación
+                    {},                     // atributos a establecer en el componente cuando se crea
+                    "lexcontainer",         // la ubicación del DOM para insertar el componente
+                    function(cmp) {
+                        console.log('Inicializado.'); // callback cuando el componente está activo
+                    }
+                );
+            },
+            'https://druni.my.salesforce-sites.com/casoWeb'  // endpoint de Experience Cloud
+        );
+    })();
       </script>
-  </body>
+</head>
 </html>
