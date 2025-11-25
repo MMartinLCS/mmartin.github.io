@@ -1,3 +1,4 @@
+<html>
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
@@ -18,3 +19,6 @@
 	};
 </script>
 <script type='text/javascript' src='https://druni.my.site.com/ESWServiceAgentPortugal1763115153679/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+hola
+
+</html>
