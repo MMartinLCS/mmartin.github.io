@@ -1,63 +1,28 @@
-<!-- ESTE ES EL QUE CARGA LA PAGE. MODIFICAR SOLO ESTE CON EL CODIGO DE LA PAGE QUE SE QUIERA CARGAR -->
 <!doctype html>
 <html lang="es">
-    <head >
-                <meta charset="utf-8"/>
-<meta name="title" content="Formulario att cliente"/>
-<meta name="robots" content="INDEX,FOLLOW"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-<meta name="format-detection" content="telephone=no"/>
-<title>Formulario att cliente</title>
-<script src="https://druni--devpt.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
-<div id="lexcontainer" style="padding-top: 10%;"></div>
-</div></div></div></main><footer class="page-footer"><div class="footer content"><div class="row no-gutters"><div class="footer-contact col-12 col-md-3"><div class="footer-logo"><img src="https://release.druni.es/media/wysiwyg/logoStore/logo.svg" width="116" height="30" /></div>
-<!--<p class="store-hours">Lunes - Viernes de 9:00 a 19:00h</p>
-<p class="store-phone"><a href="tel:+34 603 774 054">+34 603 774 054</a></p> -->
-<div x-data="{ open: false }" class="mb-50" id="all_stores_list">
-    <div class="title-font text-md text-gray-dark mb-2 hidden">
-        Lenguaje    </div>
-    <div class="relative w-fit">
-        <button @click.prevent="open = !open"
-                @click.outside="open = false"
-                @keydown.window.escape="open=false"
-                class="flex flex-row flex-nowrap items-center cursor-pointer border-none hover:bg-transparent active:bg-transparent focus:bg-transparent px-2"
-                aria-haspopup="true"
-                aria-expanded="true">
-            <span><img class="h-4 w-4 mr-2.5" width="16" height="16" alt="Flag España (Península y Baleares)" src="https://release.druni.es/static/version1729709362/frontend/Druni/default/es_ES/images/store/es_es.svg" loading="lazy"/></span>
-            <span>España (Península y Baleares)</span>
-            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-4 h-4 ml-2" width="24" height="24"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg>
-</span>
-        </button>
-        <nav x-cloak=""
-             x-show="open"
-             class="overflow-auto absolute left-0 top-full z-20 rounded-sm shadow-lg origin-top-left bg-container-lighter text-black mt-1.5 lg:mt-4 w-max">
-                                            <div class="divide-y divide-gray-light" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                    <a href="https://canarias.druni.es"
-                       class="flex flex-row items-center text-lg flex-no-wrap px-4 py-2 hover:bg-gray-light">
-                        <span><img class="h-4 w-4 mr-2.5" width="16" height="16" alt="Flag España (Islas Canarias)" src="https://release.druni.es/static/version1729709362/frontend/Druni/default/es_ES/images/store/es_Es.svg" loading="lazy"/></span>
-                        España (Islas Canarias)                    </a>
-                </div>
-                                    </nav>
-    </div>
-</div>
-<script type="text/javascript">
-	    (function() {
-      console.log('init component');
-        $Lightning.use("c:embeddedCaseFormWebPTApp",    // nombre de la aplicación Lightning
-            function() {
-                console.log('Agregar componente.');
-                $Lightning.createComponent(
-                    "c:embeddedCaseFormWebPT", // componente de nivel superior de tu aplicación
-                    {},                     // atributos a establecer en el componente cuando se crea
-                    "lexcontainer",         // la ubicación del DOM para insertar el componente
-                    function(cmp) {
-                        console.log('Inicializado.'); // callback cuando el componente está activo
-                    }
-                );
-            },
-            'https://druni--devpt.sandbox.my.salesforce-sites.com/casoWebPT'  // endpoint de Experience Cloud
-        );
-    })();
-      </script>
+<head >
+            
 </head>
+<body>
+    <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'es'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00D2o000000kDzf',
+				'Service_Agent_Portugal',
+				'https://druni.my.site.com/ESWServiceAgentPortugal1763115153679',
+				{
+					scrt2URL: 'https://druni.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://druni.my.site.com/ESWServiceAgentPortugal1763115153679/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+</body>
 </html>
